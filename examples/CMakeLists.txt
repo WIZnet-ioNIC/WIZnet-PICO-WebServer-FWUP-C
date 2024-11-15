@@ -1,0 +1,2 @@
+add_subdirectory(webserver_fwup)
+add_subdirectory(blink_app)
