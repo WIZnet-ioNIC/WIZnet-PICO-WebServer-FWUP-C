@@ -1,0 +1,6 @@
+[submodule "ioLibrary_Driver"]
+	path = ioLibrary_Driver
+	url = https://github.com/Wiznet/ioLibrary_Driver.git
+[submodule "pico-sdk"]
+	path = pico-sdk
+	url = https://github.com/raspberrypi/pico-sdk.git
