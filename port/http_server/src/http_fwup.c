@@ -63,7 +63,7 @@ uint8_t http_update_firmware(st_http_request * p_http_request, uint8_t *buf)
             remain_len = (buf_len + body_len) - FLASH_SECTOR_SIZE;
             memcpy(flash_temp_buf + buf_len, pHTTP_RX, body_len - remain_len);
 
-            //sleep_ms(1);
+            printf("f_addr = 0x%08X\r\n", f_addr);
             flash_range_erase(f_addr, FLASH_SECTOR_SIZE);
             flash_range_program(f_addr, (uint8_t *)flash_temp_buf, FLASH_SECTOR_SIZE);
             f_addr += FLASH_SECTOR_SIZE;
@@ -83,7 +83,6 @@ uint8_t http_update_firmware(st_http_request * p_http_request, uint8_t *buf)
       flash_range_program(f_addr, flash_temp_buf, FLASH_SECTOR_SIZE);
     }
     free(flash_temp_buf);
-    printf("firmware update finish\r\n");
     ret = 1;
   }
   else

@@ -29,7 +29,8 @@ elseif(${BOARD_NAME} STREQUAL W55RP20_EVB_PICO)
     set(WIZNET_CHIP W5500)
     add_definitions(-D_WIZCHIP_=W5500)
     add_definitions(-DDEVICE_BOARD_NAME=W55RP20_EVB_PICO)
-
+    add_definitions(-DPICO_DEFAULT_LED_PIN=19)
+    
 elseif(${BOARD_NAME} STREQUAL W5100S_EVB_PICO2)
     set(PICO_PLATFORM rp2350)
     set(WIZNET_CHIP W5100S)

@@ -634,7 +634,8 @@ static void http_process_handler(uint8_t s, st_http_request * p_http_request)
 
 					// Reset the H/W for apply to the change configuration information
 					if(content_found == HTTP_RESET) HTTPServer_ReStart();
-					else if(content_found == HTTP_FWUP) {					    
+					else if(content_found == HTTP_FWUP) {			
+						printf("jump_to_app\r\n");
 						jump_to_app(APPLICATION_ADDR);
 					}
 				}
